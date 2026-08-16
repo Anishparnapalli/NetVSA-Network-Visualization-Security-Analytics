@@ -1,0 +1,27 @@
+{
+  "name": "netvsa",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "NetVSA — Network Visualization & Security Analytics",
+  "scripts": {
+    "dev": "pnpm --filter @netvsa/web dev",
+    "dev:agent": "pnpm --filter @netvsa/agent dev",
+    "build": "pnpm --filter @netvsa/web build",
+    "test": "pnpm -r run test",
+    "e2e": "pnpm --filter @netvsa/web e2e",
+    "lint": "pnpm -r run lint",
+    "format": "prettier --write .",
+    "typecheck": "pnpm -r run typecheck"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@playwright/test": "^1.48.2",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "typescript-eslint": "^8.13.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
