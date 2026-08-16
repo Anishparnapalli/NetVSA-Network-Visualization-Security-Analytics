@@ -1,0 +1,35 @@
+/**
+ * NetVSA design tokens — dark "control room" base palette.
+ *
+ * Per Technical Architecture §8.8: one accent-color family per concern,
+ * applied consistently across 3D materials, badges, and charts.
+ *   neutral = idle
+ *   blue    = active / transmitting
+ *   amber   = warning / inspecting
+ *   red     = threat / blocked
+ *   green   = resolved / allowed
+ *
+ * This file is the single source of truth for the palette. Phase 1 wires
+ * it into the DOM only (via Tailwind, see tailwind.config.js). Importing
+ * the same values into 3D materials/shaders is Phase 4+ scope, per the
+ * architecture doc's "centrally defined once" requirement.
+ */
+
+:root {
+  /* Base surfaces */
+  --netvsa-bg: #0b0d12;
+  --netvsa-bg-raised: #11141b;
+  --netvsa-bg-panel: #161a23;
+  --netvsa-border: #262b38;
+
+  /* Text */
+  --netvsa-text: #e6e9f0;
+  --netvsa-text-muted: #8b93a7;
+
+  /* Security / status color language */
+  --netvsa-idle: #5b6478;
+  --netvsa-active: #3b82f6;
+  --netvsa-warning: #f59e0b;
+  --netvsa-threat: #ef4444;
+  --netvsa-resolved: #22c55e;
+}
